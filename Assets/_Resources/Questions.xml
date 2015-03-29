@@ -1,0 +1,7 @@
+<xml>
+<!--
+ALL questions MUST follow one of theese formats, -'s instead of spaces and the answer should be zero indezed to the answer choices (in t/f true is 0 false is 1)
+-->
+	<question id="1" type="multichoice"  text="This-is-the-template-for-a-multichoice-question,-mkay?" a1="okay" a2="i-know" a3="whatever" a4="i'm-the-right-choice"  correct="3" /> 
+	<question id="2" type="truefalse" text="this-is-the-template-for-a-tf-question,-is-this-true?" correct="0" />
+</xml>
