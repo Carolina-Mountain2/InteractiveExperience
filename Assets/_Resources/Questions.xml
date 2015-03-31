@@ -2,6 +2,6 @@
 <!--
 ALL questions MUST follow one of theese formats, -'s instead of spaces and the answer should be zero indezed to the answer choices (in t/f true is 0 false is 1)
 -->
-	<question id="1" type="multichoice"  text="This_is_the_template_for_a_multichoice_question,_mkay?" a1="okay" a2="i-know" a3="whatever" a4="i'm-the-right-choice"  correct="3" /> 
+	<question id="1" type="multichoice"  text="This_is_the_template_for_a_multichoice_question,_mkay?" a1="okay" a2="i_know" a3="whatever" a4="i'm_the_right_choice"  correct="3" /> 
 	<question id="2" type="truefalse" text="this_is_the_template_for_a_tf_question,_is_this_true?" correct="0" />
 </xml>

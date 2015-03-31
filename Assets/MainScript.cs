@@ -24,6 +24,7 @@ public class MainScript : MonoBehaviour {
 		questions = Qs.ToArray();
 
 
+
 		//print (questions [1].correct);
 
 	
