@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 
 /*
+ * XML file adapted from Jeremy Gibson's Textbook
+ * Modified for our uses.
+ * 
+ * 
 <xml>
 	<jeremy age="36">
 		<friend name="Harrison">
