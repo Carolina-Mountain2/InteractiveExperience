@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class MainScript : MonoBehaviour {
-	public TextAsset xml;
+	public TextAsset xml;  
 	QuestionParser QP;
 	public static MainScript S;
 	public List<Question> Qs;
@@ -23,7 +23,8 @@ public class MainScript : MonoBehaviour {
 		parseQuestions ();
 		questions = Qs.ToArray();
 
-		print (questions [1].correct);
+
+		//print (questions [1].correct);
 
 	
 	}

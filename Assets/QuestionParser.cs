@@ -25,12 +25,23 @@ public class QuestionParser : MonoBehaviour {
 	public string removeFormat(string x){    
 
 	
-		x = x.Replace ("-", " ");
+		x = x.Replace ("_", " ");
 		//print (x);
 
 		return x;
 
 	
+	}
+	public int parseAns(string ans){
+		int x = -1;
+		for (int i = 0; i <= 4; i++) {
+			if (i.ToString() == ans){
+				//print (i);
+				x=i;
+			}
+
+		}
+		return (x);
 	}
 
 	public void read(string xmlText){
@@ -48,6 +59,8 @@ public class QuestionParser : MonoBehaviour {
 			qt.qtext = qs[i].att ("text");
 			qt.qtext = removeFormat(qt.qtext);
 			qt.cChoice = qs[i].att ("correct");
+			qt.ansReal = parseAns(qt.cChoice);
+			//print (qt.ansReal);
 
 			//print (qt.qid);
 			//print (qt.qtype);
@@ -88,7 +101,7 @@ public class QuestionParser : MonoBehaviour {
 
 
 			q = new Question();
-		    q.create(qt.qid,qt.qtext,qt.qtype,qt.ansarray,qt.cChoice);
+		    q.create(qt.qid,qt.qtext,qt.qtype,qt.ansarray,qt.ansReal);
 			MainScript.S.Qs.Add(q);
 
 		
@@ -108,6 +121,7 @@ public class qtem{
 	public string cChoice;
 	public string qtype;
 	public string[] ansarray;
+	public int ansReal;
 
 
 }

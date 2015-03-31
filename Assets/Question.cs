@@ -14,7 +14,7 @@ public class Question {
 	public int corChoice;
 
 	// Use this for initialization
-	public void create(string id, string qtext, string type ,string[] qanswers,string cchoice)
+	public void create(string id, string qtext, string type ,string[] qanswers,int cchoice)
 	{
 		this.qText = qtext;
 		if (type == "truefalse") {
@@ -23,7 +23,7 @@ public class Question {
 			answers[0] = "true";
 			answers[1] = "false";
 			this.QID = id;
-			this.correct = cchoice;
+			this.corChoice = cchoice;
 
 
 		}
@@ -32,7 +32,7 @@ public class Question {
 			this.answers = new string[qanswers.Length];
 			this.answers = qanswers;
 			this.QID = id;
-			this.correct = cchoice;
+			this.corChoice = cchoice;
 		}
 	
 
