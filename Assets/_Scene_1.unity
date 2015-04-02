@@ -85,6 +85,7 @@ GameObject:
   - 33: {fileID: 70988419}
   - 23: {fileID: 70988418}
   - 111: {fileID: 70988417}
+  - 135: {fileID: 70988420}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -148,6 +149,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2022888055}
   m_GameObject: {fileID: 70988415}
   m_Mesh: {fileID: 4300000, guid: 8e41f14c6552d48e6a7992aaecc808e4, type: 3}
+--- !u!135 &70988420
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70988415}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1001 &101931850
 Prefab:
   m_ObjectHideFlags: 0
@@ -255,6 +268,7 @@ GameObject:
   - 33: {fileID: 133368489}
   - 23: {fileID: 133368488}
   - 111: {fileID: 133368487}
+  - 135: {fileID: 133368490}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -318,6 +332,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 413955004}
   m_GameObject: {fileID: 133368485}
   m_Mesh: {fileID: 4300000, guid: 8e41f14c6552d48e6a7992aaecc808e4, type: 3}
+--- !u!135 &133368490
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133368485}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1001 &159745108
 Prefab:
   m_ObjectHideFlags: 0
@@ -385,6 +411,7 @@ GameObject:
   - 33: {fileID: 176149838}
   - 23: {fileID: 176149837}
   - 111: {fileID: 176149836}
+  - 135: {fileID: 176149840}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -448,6 +475,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 112650927}
   m_RootOrder: 0
+--- !u!135 &176149840
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 176149835}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1001 &183376114
 Prefab:
   m_ObjectHideFlags: 0
@@ -817,7 +856,6 @@ GameObject:
   - 33: {fileID: 434753512}
   - 23: {fileID: 434753511}
   - 111: {fileID: 434753510}
-  - 65: {fileID: 434753514}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -881,18 +919,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1642551027}
   m_RootOrder: 2
---- !u!65 &434753514
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 434753509}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 15, z: 3}
-  m_Center: {x: .553521395, y: 1.13743329, z: -.106781982}
 --- !u!1001 &547994743
 Prefab:
   m_ObjectHideFlags: 0
@@ -1361,6 +1387,7 @@ GameObject:
   - 33: {fileID: 777573396}
   - 23: {fileID: 777573395}
   - 111: {fileID: 777573394}
+  - 135: {fileID: 777573398}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -1424,6 +1451,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 112650927}
   m_RootOrder: 12
+--- !u!135 &777573398
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777573393}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1 &796739444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1474,7 @@ GameObject:
   - 33: {fileID: 796739447}
   - 23: {fileID: 796739446}
   - 111: {fileID: 796739445}
+  - 135: {fileID: 796739449}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -1498,6 +1538,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 112650927}
   m_RootOrder: 2
+--- !u!135 &796739449
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 796739444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1 &876115935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,8 +1604,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876115935}
-  m_LocalRotation: {x: .0836742967, y: .895400047, z: .39376989, w: -.190270126}
-  m_LocalPosition: {x: 753.957458, y: -1344.53613, z: 892.60437}
+  m_LocalRotation: {x: .440477401, y: .118705437, z: .0588864647, w: -.88793081}
+  m_LocalPosition: {x: 816.105469, y: -618.669861, z: -303.713074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1569,6 +1621,7 @@ GameObject:
   - 33: {fileID: 889973934}
   - 23: {fileID: 889973933}
   - 111: {fileID: 889973932}
+  - 135: {fileID: 889973935}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -1632,6 +1685,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 547994743}
   m_GameObject: {fileID: 889973930}
   m_Mesh: {fileID: 4300000, guid: 8e41f14c6552d48e6a7992aaecc808e4, type: 3}
+--- !u!135 &889973935
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 889973930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1 &971565862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,8 +1778,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1089201061}
-  m_LocalRotation: {x: .0151871685, y: .746046543, z: .665502906, w: -.0170236323}
-  m_LocalPosition: {x: 763.8172, y: 42.3204346, z: -74.0808334}
+  m_LocalRotation: {x: .384343982, y: .00359947071, z: .00149846624, w: -.923181772}
+  m_LocalPosition: {x: 601.375671, y: -106.203171, z: 191.690384}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1988,6 +2053,7 @@ GameObject:
   - 33: {fileID: 1546416699}
   - 23: {fileID: 1546416698}
   - 111: {fileID: 1546416697}
+  - 135: {fileID: 1546416700}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -2051,6 +2117,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 101931850}
   m_GameObject: {fileID: 1546416695}
   m_Mesh: {fileID: 4300000, guid: 8e41f14c6552d48e6a7992aaecc808e4, type: 3}
+--- !u!135 &1546416700
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1546416695}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1001 &1588151057
 Prefab:
   m_ObjectHideFlags: 0
@@ -2276,7 +2354,7 @@ MonoBehaviour:
   canControl: 1
   useFixedUpdate: 1
   movement:
-    maxForwardSpeed: 100
+    maxForwardSpeed: 50
     maxSidewaysSpeed: 6
     maxBackwardsSpeed: 100
     slopeSpeedMultiplier:
@@ -2362,6 +2440,7 @@ GameObject:
   - 33: {fileID: 1644576025}
   - 23: {fileID: 1644576024}
   - 111: {fileID: 1644576023}
+  - 135: {fileID: 1644576026}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -2425,6 +2504,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2066878831}
   m_GameObject: {fileID: 1644576021}
   m_Mesh: {fileID: 4300000, guid: 8e41f14c6552d48e6a7992aaecc808e4, type: 3}
+--- !u!135 &1644576026
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644576021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1001 &1655975472
 Prefab:
   m_ObjectHideFlags: 0
@@ -2470,7 +2561,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: movement.maxForwardSpeed
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: sliding.enabled
@@ -2528,6 +2619,7 @@ GameObject:
   - 33: {fileID: 1783907372}
   - 23: {fileID: 1783907371}
   - 111: {fileID: 1783907370}
+  - 135: {fileID: 1783907373}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -2591,6 +2683,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2092541725}
   m_GameObject: {fileID: 1783907368}
   m_Mesh: {fileID: 4300000, guid: 8e41f14c6552d48e6a7992aaecc808e4, type: 3}
+--- !u!135 &1783907373
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783907368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1 &1784300927
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,6 +2706,9 @@ GameObject:
   - 33: {fileID: 1784300930}
   - 23: {fileID: 1784300929}
   - 111: {fileID: 1784300928}
+  - 135: {fileID: 1784300932}
+  - 135: {fileID: 1784300934}
+  - 135: {fileID: 1784300933}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -2665,6 +2772,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 112650927}
   m_RootOrder: 1
+--- !u!135 &1784300932
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784300927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
+--- !u!135 &1784300933
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784300927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
+--- !u!135 &1784300934
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784300927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1001 &1865656776
 Prefab:
   m_ObjectHideFlags: 0
@@ -2732,6 +2875,7 @@ GameObject:
   - 33: {fileID: 1889233313}
   - 23: {fileID: 1889233312}
   - 111: {fileID: 1889233311}
+  - 135: {fileID: 1889233314}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -2795,6 +2939,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1131900248}
   m_GameObject: {fileID: 1889233309}
   m_Mesh: {fileID: 4300000, guid: 8e41f14c6552d48e6a7992aaecc808e4, type: 3}
+--- !u!135 &1889233314
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1889233309}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1 &1912389491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,6 +2962,7 @@ GameObject:
   - 33: {fileID: 1912389495}
   - 23: {fileID: 1912389494}
   - 111: {fileID: 1912389493}
+  - 135: {fileID: 1912389496}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -2869,6 +3026,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 703532977}
   m_GameObject: {fileID: 1912389491}
   m_Mesh: {fileID: 4300000, guid: 8e41f14c6552d48e6a7992aaecc808e4, type: 3}
+--- !u!135 &1912389496
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1912389491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1 &1970761109
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,6 +3204,7 @@ GameObject:
   - 33: {fileID: 2029014647}
   - 23: {fileID: 2029014646}
   - 111: {fileID: 2029014645}
+  - 135: {fileID: 2029014649}
   m_Layer: 0
   m_Name: RockMesh
   m_TagString: Untagged
@@ -3098,6 +3268,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 112650927}
   m_RootOrder: 3
+--- !u!135 &2029014649
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029014644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.39999998
+  m_Center: {x: -.0401257277, y: .968328953, z: -.195792943}
 --- !u!1001 &2066878831
 Prefab:
   m_ObjectHideFlags: 0
