@@ -718,13 +718,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TerrainData: {fileID: 15600000, guid: 474ef7fa95fee429a8761a50a15de72b, type: 2}
-  m_TreeDistance: 2000
+  m_TreeDistance: 1031
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
+  m_DetailObjectDistance: 62.4000015
   m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
+  m_HeightmapPixelError: 22.7000008
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
@@ -1778,8 +1778,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1089201061}
-  m_LocalRotation: {x: .384343982, y: .00359947071, z: .00149846624, w: -.923181772}
-  m_LocalPosition: {x: 601.375671, y: -106.203171, z: 191.690384}
+  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: 718.572083, y: -4240.53369, z: -22.0951328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
