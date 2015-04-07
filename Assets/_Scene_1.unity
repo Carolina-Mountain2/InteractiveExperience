@@ -85,6 +85,7 @@ GameObject:
   - 33: {fileID: 48729972}
   - 64: {fileID: 48729971}
   - 23: {fileID: 48729970}
+  - 114: {fileID: 48729974}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -119,8 +120,8 @@ MeshCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48729969}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -144,6 +145,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1034948959}
   m_RootOrder: 9
+--- !u!114 &48729974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 48729969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4226be68edb1e4459f778b6b0aeac82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &70988415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,8 +2361,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1089201061}
-  m_LocalRotation: {x: -.405937403, y: .147018969, z: .0663457364, w: .89955461}
-  m_LocalPosition: {x: 787.360046, y: -9.38556671, z: -30.9638062}
+  m_LocalRotation: {x: .280023009, y: .148993358, z: .0440397225, w: -.947337687}
+  m_LocalPosition: {x: 846.872803, y: -134.976379, z: -215.481232}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3100,7 +3112,7 @@ GameObject:
   - 114: {fileID: 1642551028}
   m_Layer: 0
   m_Name: First Person Controller
-  m_TagString: Untagged
+  m_TagString: Boat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3407,6 +3419,10 @@ Prefab:
     - target: {fileID: 400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_LocalPosition.y
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_TagString
+      value: Boat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
