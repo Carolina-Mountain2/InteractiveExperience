@@ -4,4 +4,15 @@ ALL questions MUST follow one of theese formats, -'s instead of spaces and the a
 -->
 	<question id="1" type="multichoice"  text="This_is_the_template_for_a_multichoice_question,_mkay?" a1="okay" a2="i_know" a3="whatever" a4="i'm_the_right_choice"  correct="3" /> 
 	<question id="2" type="truefalse" text="this_is_the_template_for_a_tf_question,_is_this_true?" correct="0" />
+	<question id="3" type="multichoice" text="The_National_Trails_System_Act_was_passed_on:" a1="October_2nd_1968" a2="September_2nd_1968" a3="November_2nd_1968" a4="August_2nd_1968" correct="0" />
+	<question id="4" type="truefalse" text="True_or_False?_The_National_Trails_System_Act_was_passed_by_the_United_States_Congress?" correct="0" />
+	<question id="5" type="multichoice" text="According_to_the_North_Carolina_Trails_System,_there_are_three_types_of_trails,_Which_are_the_three_trails?" a1="easy,_medium_and_hard" a2="foot_bike_and_horseback" a3="state_scenic_trails,_state_recreation_trails,_and_connecting_or_side_trails" a4="national_scenic_trails,_national_recreation_trails,_connecting_or_side_trails" correct="2" /> 
+	<question id="6" type="multichoice" text="Who_can_establish_and_designate_national_recreation_trails?" a1="Secretary_of_the_Interior" a2="Secretary_of_Agriculture" a3="Secretary_of_the_Interior_AND_Secretary_of_Agriculture" a4="None_of_these" correct="2" />
+	<question id="7" type="multichoice" text="Who_claimed_that_they_would_put_foward_every_effort_to_provide_protection_for_the_Appalachian_Trail?" a1="Roger_Morton,_Secretary_of_the_Interior_in_1973" a2="Earl_Butz,_Secretary_of_Agriculture_in_1973" a3="Jim_Holshouser,_governor_of_North_Carolina_in_1973" a4="John_Davis,_President_of_the_Carolina_Mountain_Club_in_1973" correct="2" />
+	<question id="8" type="truefalse" text="True_or_False?_The_North_Carolina_Trail_System_and_the_National_Trail_Systems_Act_dealt_exclusively_with_the_Joyce_Kilmer-Slickrock_Wilderness?" correct="1" />
+	<question id="9" type="multichoice" text="Which_trail(s)_was_not_established_by_the_National_Trail_Systems_Act_in_1968?" a1="The_Appalachian_Trail" a2="The_Pacific_Crest_Trail" a3="Blue_Ridge_Parkway_Trails" a4="All_of_these" correct="2" />
+	<question id="10" type="multichoice" text="When_was_the_North_Carolina_Trails_System_Act_passed?" a1="March_22,_1973" a2="May_2,_1973" a3="May_12,_1973" a4="May_22,_1973" correct="3" />
+	<question id="11" type="multichoice" text="Who_has_the_authorization_to_establish_or_designate_state_scenic_and_recreation_trails_on_lands_administered_by_the_department_for_North_Carolina?" a1="Secretary_of_the_Department_of_Natural_Resources_and_Community" a2="Secretary_of_the_Interior" a3="Secretary_of_Agriculture" a4="President_of_the_United_States" correct="0" />
+	<question id="12" type="truefalse" text="True_or_False?_According_to_the_North_Carolina_Trails_System_Act,_landowners_whose_land_has_been_declared_as_part_of_a_state_trial_can_declare_the_state_a_trespasser." correct="0" />
+	
 </xml>

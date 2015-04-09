@@ -21,7 +21,7 @@ public class MainScript : MonoBehaviour {
 
 
 		parseQuestions ();
-		questions = Qs.ToArray(); // QUESTION ARRAY CREATED HERE; ANYTHING DEALING WITH QUESTIONS SHOULD BE BELOW THIS
+		questions = Qs.ToArray(); // QUESTION ARRAY CREATED HERE; ANYTHING DEALING WITH QUESTIONS SHOULD BE BELOW THIS   
 		//qprint();
 
 
@@ -47,7 +47,7 @@ public class MainScript : MonoBehaviour {
 			for (int j = 0;j<questions[i].answers.Length;j++){
 				print (questions[i].answers[j]);
 			}
-			print ("corret answer: " + questions[i].answers[questions[i].corChoice]);
+			print ("correct answer: " + questions[i].answers[questions[i].corChoice]);
 		
 		}
 
