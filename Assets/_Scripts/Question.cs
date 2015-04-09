@@ -2,16 +2,16 @@
 using System.Collections;
 
 public class Question {
-	public string qText;
+	public string qText; // the question text itself
 	public enum qType{
 		truefalse,
 		multiChoice
 	}
 	public qType type;
-	public string[] answers;
-	public string QID;
-	public string correct;
-	public int corChoice;
+	public string[] answers; // the answers in an array
+	public string QID; // HOUSEKEEPING ONLY: the number of this question
+	public string correct; // HOUSEKEEPING ONLY: the string form of the correct answer
+	public int corChoice;// the index of the correct answer
 
 	// Use this for initialization
 	public void create(string id, string qtext, string type ,string[] qanswers,int cchoice)

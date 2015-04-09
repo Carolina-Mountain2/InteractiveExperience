@@ -13,9 +13,10 @@ public class Plane : MonoBehaviour {
 	
 	}
 	void OnTriggerEnter(Collider col){    
-		print (col.name);
+
 		if (col.tag == "Boat") {
-			print ("Boat hit plane");	
+			print ("Boat hit plane");
+			print (MainScript.S.questions[0].qText);
 		}
 	}
 }
