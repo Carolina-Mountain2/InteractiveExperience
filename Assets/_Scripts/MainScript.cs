@@ -22,7 +22,7 @@ public class MainScript : MonoBehaviour {
 
 		parseQuestions ();
 		questions = Qs.ToArray(); // QUESTION ARRAY CREATED HERE; ANYTHING DEALING WITH QUESTIONS SHOULD BE BELOW THIS
-
+		//qprint();
 
 
 
@@ -40,4 +40,17 @@ public class MainScript : MonoBehaviour {
 		QP.read (xml.text);
 
 	}
+	//This method is for debug purposes only, it prints out all relevant data on every question in the array
+	public void qprint(){
+		for (int i = 0; i< questions.Length; i++) {
+			print (questions[i].qText);
+			for (int j = 0;j<questions[i].answers.Length;j++){
+				print (questions[i].answers[j]);
+			}
+			print ("corret answer: " + questions[i].answers[questions[i].corChoice]);
+		
+		}
+
+	}
+
 }
