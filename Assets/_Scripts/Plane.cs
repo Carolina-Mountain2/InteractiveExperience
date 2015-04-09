@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Plane : MonoBehaviour {
 
+	public bool paused = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -17,6 +18,10 @@ public class Plane : MonoBehaviour {
 		if (col.tag == "Boat") {
 			print ("Boat hit plane");
 			print (MainScript.S.questions[0].qText);
+			bool tem = true;
+			Pause.S.togglePause(tem);
 		}
 	}
+
+
 }

@@ -15,7 +15,9 @@ public class Rock : MonoBehaviour {
 	void OnTriggerEnter(Collider col){    
 		//print (col.name);
 		if (col.tag == "Boat") {
-			print ("Boat hit rock");	
+			print ("Boat hit rock");
+			bool tem = true;
+			Pause.S.togglePause(tem);
 		}
 	}
 }
