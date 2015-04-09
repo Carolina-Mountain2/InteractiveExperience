@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  qText: {fileID: 0}
 --- !u!1 &70988415
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  qText: {fileID: 0}
 --- !u!1 &206033192
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,6 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  qText: {fileID: 0}
 --- !u!1 &243069630
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  tex: {fileID: 0}
 --- !u!1 &288788680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,6 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  qText: {fileID: 0}
 --- !u!1 &637653365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,6 +1627,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specularLight: {fileID: 971565863}
+--- !u!1 &673924571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 673924572}
+  - 132: {fileID: 673924573}
+  m_Layer: 0
+  m_Name: questionText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &673924572
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 673924571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .850000024, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+--- !u!132 &673924573
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 673924571}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 20
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1001 &703532977
 Prefab:
   m_ObjectHideFlags: 0
@@ -1824,6 +1880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  qText: {fileID: 0}
 --- !u!1 &736422242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,6 +2379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  qText: {fileID: 0}
 --- !u!1 &971565862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,8 +2498,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1089201061}
-  m_LocalRotation: {x: .261080027, y: .351561725, z: .102771029, w: -.89312917}
-  m_LocalPosition: {x: 1455.82642, y: -1168.28442, z: -1190.52087}
+  m_LocalRotation: {x: 0, y: .229281247, z: 0, w: .97336024}
+  m_LocalPosition: {x: 763.761292, y: 52.1399994, z: -75.306076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2641,6 +2699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  qText: {fileID: 0}
 --- !u!1 &1308035997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2724,6 +2783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  qText: {fileID: 0}
 --- !u!1 &1414435170
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,6 +3164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  qText: {fileID: 0}
 --- !u!1 &1621337328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,6 +3615,10 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
   m_RootGameObject: {fileID: 1642551026}
@@ -3642,6 +3707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paused: 0
+  qText: {fileID: 0}
 --- !u!1 &1783907368
 GameObject:
   m_ObjectHideFlags: 0
