@@ -3,41 +3,31 @@ using System.Collections;
 
 public class Pause : MonoBehaviour
 {
-
 		public bool paused = false;
 		public static Pause S;
 
-
-
-
-
-		void Start ()
-		{
+		void Start () {
 				S = this;
 				togglePause (false);
-
 		}
 
-		void Update ()
-		{
+		void Update () {
 
 		}
-
-		public Texture tex;
 
 		void OnGUI ()
 		{
 
 				if (paused) {
-			GUILayout.Box(MainScript.S.questions[0].qText);
+						GUILayout.Box (MainScript.S.questions [0].qText);
 		
-			if (GUI.Button (new Rect (280, 200, 100, 50), "unpause me!")) {
+						if (GUI.Button (new Rect (280, 200, 100, 50), "unpause me!")) {
 								print ("game unpaused");
-								togglePause(false);
+								togglePause (false);
 
-										}
+						}
 				}
-		}
+	}
 
 		public void togglePause (bool isPaused)
 		{
