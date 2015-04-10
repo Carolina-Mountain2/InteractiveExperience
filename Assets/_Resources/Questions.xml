@@ -3,7 +3,7 @@
 ALL questions MUST follow one of theese formats, -'s instead of spaces and the answer should be zero indezed to the answer choices (in t/f true is 0 false is 1)
 -->
 	<question id="1" type="multichoice"  text="This_is_the_template_for_a_multichoice_question,_mkay?" a1="okay" a2="i_know" a3="whatever" a4="i'm_the_right_choice"  correct="3" /> 
-	<question id="2" type="truefalse" text="this_is_the_template_for_a_tf_question,_is_this_true?" correct="0" />
+	<question id="2" type="truefalse" text="this_is_the_template_for_a_tf_question,_is_this_true?" correct="0" /> 
 	<question id="3" type="multichoice" text="The_National_Trails_System_Act_was_passed_on:" a1="October_2nd_1968" a2="September_2nd_1968" a3="November_2nd_1968" a4="August_2nd_1968" correct="0" />
 	<question id="4" type="truefalse" text="True_or_False?_The_National_Trails_System_Act_was_passed_by_the_United_States_Congress?" correct="0" />
 	<question id="5" type="multichoice" text="According_to_the_North_Carolina_Trails_System,_there_are_three_types_of_trails,_Which_are_the_three_trails?" a1="easy,_medium_and_hard" a2="foot_bike_and_horseback" a3="state_scenic_trails,_state_recreation_trails,_and_connecting_or_side_trails" a4="national_scenic_trails,_national_recreation_trails,_connecting_or_side_trails" correct="2" /> 
@@ -14,5 +14,16 @@ ALL questions MUST follow one of theese formats, -'s instead of spaces and the a
 	<question id="10" type="multichoice" text="When_was_the_North_Carolina_Trails_System_Act_passed?" a1="March_22,_1973" a2="May_2,_1973" a3="May_12,_1973" a4="May_22,_1973" correct="3" />
 	<question id="11" type="multichoice" text="Who_has_the_authorization_to_establish_or_designate_state_scenic_and_recreation_trails_on_lands_administered_by_the_department_for_North_Carolina?" a1="Secretary_of_the_Department_of_Natural_Resources_and_Community" a2="Secretary_of_the_Interior" a3="Secretary_of_Agriculture" a4="President_of_the_United_States" correct="0" />
 	<question id="12" type="truefalse" text="True_or_False?_According_to_the_North_Carolina_Trails_System_Act,_landowners_whose_land_has_been_declared_as_part_of_a_state_trial_can_declare_the_state_a_trespasser." correct="0" />
-	
+	<question id="13" type="multichoice" text="How_much_money_was_given_for_the_acquisition_of_the_Appalachian_National_Scenic_Trail?" a1="$4,000,000" a2="$5,000,000" a3="$500,000" a4="$6,000,000" correct="1" />
+	<question id="14" type="multichoice" text="How_much_money_was_given_for_the_acquisition_of_the_Pacific_Crest_National_Scenic_Trail?" a1="$5,000,000" a2="$100,000" a3="$1,000,000" a4="$500,000" correct="3" />
+	<question id="15" type="multichoice" text="Who_has_the_power_to_authorize_and_designate_a_national_scenic_trail?" a1="Secretary_of_the_Interior" a2="An_Act_of_Congress" a3="Secretary_of_Agriculture" a4="President_of_the_CMC" correct="1" />
+	<question id="16" type="truefalse" text="True_or_False?_The_Secretary_of_the_Interior_is_the_person_that_can_establish_an_advisory_council_for_the_Appalachian_National_Scenic_Trail." correct="0" />
+	<question id="17" type="truefalse" text="True_or_False?_The_Secretary_of_the_Interior_is_the_person_that_can_establish_an_advisory_council_for_the_Pacific_Crest_National_Scenic_Trail." correct="1" />
+	<question id="18" type="multichoice" text="Which_of_these_is_not_allowed_on_a_national_scenic_trail?" a1="campsites" a2="shelters" a3="related_public-use_facilities" a4="RV_sites" correct="3" />
+	<question id="19" type="multichoice" text="What_date_was_Senate_Bill_No._3699_passed?" a1="June_1972" a2="July_1972" a3="January_1972" a4="August_1972" correct="0" />
+	<question id="20" type="truefalse"  text="True_or_False?_The_Joyce_Kilmer-Slickrock_Wilderness_was_petitioned_to_be_sanctioned_as_a_wilderness_area_because_both_pieces_of_land_allowed_for_informative_botanical_studies?" correct="0" />
+	<question id="21" type="multichoice" text="Which_president_asked_Congress_for_substantial_expansion_of_the_National_Wilderness_Preservation_System_in_his_report_on_the_State_of_the_Environment?" a1="Gerald_Ford" a2="Richard_Nixion" a3="Theodore_Roosevelt" a4="John_F._Kennedy" correct="1" />
+	<question id="22" type="truefalse" text="True_or_False?_The_Joyce_Kilmer-Slickrock_Wilderness_was_passed_and_still_remains_a_wilderness_area_today?" correct="0" />
+	<question id="23" type="multichoice" text="Who_was_the_Secretary_of_the_Interior_in_1968_when_the_National_Trail_Systems_Act_was_passed?" a1="Walter_J._Hickel" a2="Roger_Morton" a3="Fred_A._Seaton" a4="Stewart_Udall" correct="3" />
+	<question id="24" type="multichoice" text="Who_was_the_Secretary_of_Agriculture_in_1968_when_the_National_Trail_Systems_Act_was_passed?" a1="Clifford_M._Hardin" a2="Orville_L._Freeman" a3="Earl_L._Butz" a4="Ezra_Taft_Benson" correct="1" />
 </xml>

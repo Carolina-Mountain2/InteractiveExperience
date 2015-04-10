@@ -21,9 +21,11 @@ public class Pause : MonoBehaviour
 				if (paused) {
 						GUILayout.Box (MainScript.S.questions [0].qText);
 		
-						if (GUI.Button (new Rect (280, 200, 100, 50), "unpause me!")) {
+						if (GUI.Button (new Rect (280, 200, 100, 50), "unpause me!")) {       
 								print ("game unpaused");
 								togglePause (false);
+				                GameObject x = GameObject.Find("First Person Controller");
+				               
 
 						}
 				}
@@ -36,11 +38,15 @@ public class Pause : MonoBehaviour
 						paused = true;
 						Time.timeScale = 0f;
 						print ("game paused");
+						
+			            GameObject x = GameObject.Find("First Person Controller");
+			           
 
 				} else {
 						paused = false;
 						Time.timeScale = 1f; 
 						print ("game paused");
+
 				}
 
 		}
