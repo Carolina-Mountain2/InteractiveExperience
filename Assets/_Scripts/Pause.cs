@@ -5,10 +5,17 @@ public class Pause : MonoBehaviour
 {
 		public bool paused = false;
 		public static Pause S;
+		MouseLook MouseLookScriptX;
+	MouseLook MouseLookScriptY;
 
 		void Start () {
 				S = this;
 				togglePause (false);
+				GameObject x = GameObject.Find("First Person Controller");
+				GameObject y = GameObject.Find("Main Camera");
+				MouseLookScriptX = x.GetComponent<MouseLook>();
+			MouseLookScriptY = y.GetComponent<MouseLook>();
+
 		}
 
 		void Update () {
@@ -19,13 +26,13 @@ public class Pause : MonoBehaviour
 		{
 
 				if (paused) {
-						GUILayout.Box (MainScript.S.questions [0].qText);
+			GUI.Box (new Rect (280, 80, 500, 200), MainScript.S.questions [0].qText);
 		
-						if (GUI.Button (new Rect (280, 200, 100, 50), "unpause me!")) {       
+						if (GUI.Button (new Rect (280, 300, 100, 50), "unpause me!")) {       
 								print ("game unpaused");
 								togglePause (false);
-				                GameObject x = GameObject.Find("First Person Controller");
-				               
+								MouseLookScriptX.enabled = !MouseLookScriptX.enabled;
+							MouseLookScriptY.enabled = !MouseLookScriptY.enabled;
 
 						}
 				}
@@ -38,8 +45,9 @@ public class Pause : MonoBehaviour
 						paused = true;
 						Time.timeScale = 0f;
 						print ("game paused");
-						
-			            GameObject x = GameObject.Find("First Person Controller");
+						MouseLookScriptX.enabled = !MouseLookScriptX.enabled;
+			MouseLookScriptY.enabled = !MouseLookScriptY.enabled;
+
 			           
 
 				} else {
