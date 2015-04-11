@@ -63,20 +63,23 @@ public class MainScript : MonoBehaviour {
 				Application.LoadLevel ("_Scene_0");
 			}
 		}
-		}
+	}
 	// Update is called once per frame
 	void Update () {
 		hits = Pause.S.damage;
 		score = Pause.S.questPoint;
 		scoreText.guiText.text = "Score: " + score;
 		hitText.guiText.text = "Hits left: " + hits;
+		if (gameFinish == true) {
+			score = score * hits;
+		}
 		if (hits == 0) {
 			Destroy(person1);
 			Destroy(person2);
 			Time.timeScale = 0f;
 			Pause.S.mouseStopped(true);
 			gameLose = true;
-				}
+		}
 	}
 	public void parseQuestions(){
 		//print (xml.text);
