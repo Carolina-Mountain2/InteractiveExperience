@@ -7,9 +7,10 @@ public class Pause : MonoBehaviour {
 		MouseLook MouseLookScriptX;
 		MouseLook MouseLookScriptY;
 		string feedback;
-	    string ans;
+	    string ans;                
 		bool eval = false;
 		int ranQuest = 0;
+		int oldQ = 0;   
 		public int questPoint = 0;
 		public int damage = 3;
 		public Question quest;
@@ -194,7 +195,10 @@ public class Pause : MonoBehaviour {
 		public void togglePause (bool isPaused) {
 
 				if (isPaused == true) {
+						while (ranQuest == oldQ){
 						ranQuest = Random.Range (2, 23);
+						}
+						oldQ = ranQuest;
 						mouseStopped (true);
 						paused = true;
 						Time.timeScale = 0f;
