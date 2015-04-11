@@ -12,7 +12,7 @@ public class Pause : MonoBehaviour {
 		int ranQuest = 0;
 		public int questPoint = 0;
 		public int damage = 3;
-	public Question quest;
+		public Question quest;
 
 		void Start () {
 				S = this;
@@ -36,13 +36,14 @@ public class Pause : MonoBehaviour {
 
 				if (quest.type== Question.qType.multiChoice){
 						
-				GUI.Box (new Rect (285, 80, 550, 250), quest.qText +"\n" +
-				         							"A "+ quest.answers[0]+"\n" + 
-				         							"B "+ quest.answers[1]+"\n" + 
-				         							"C "+ quest.answers[2]+"\n" +         
-				         							"D "+ quest.answers[3]+"\n" + 
+				GUI.Box (new Rect (255, 80, 580, 270), quest.qText +"\n \n" +
+				         							"A) "+ quest.answers[0]+"\n" + 
+				         							"B) "+ quest.answers[1]+"\n" + 
+				         							"C) "+ quest.answers[2]+"\n" +         
+				         							"D) "+ quest.answers[3]+"\n" + 
 				         							feedback);
-						if (GUI.Button (new Rect (165, 150, 100, 50), "I give up")) {//currently representing correct choice
+						if (GUI.Button (new Rect (135, 150, 100, 50), "I give up")) {//currently representing forfeiting choice
+								feedback = "";//<-- resets "try again" if person gives up
 								questPoint = questPoint - 100;
 								damage--;
 								print (questPoint);
@@ -50,19 +51,8 @@ public class Pause : MonoBehaviour {
 								mouseStart (true);
 						}
 	
-						/*
-								 * The new Rect for the below Buttons, when script is added
-								 * to make multiple choice, 280 is left most, add 100 to that
-								 * number to account width, then add 20 to create a nice space
-								 * between the buttons.
-								 * 
-								 * There needs to be an if-else that checks which type. When
-								 * that is done all you'll need to is copy the below script 
-								 * which represents what a multichoice GUI looks like and add
-								 * it to the if multichoice statement.
-								 */
 						//button controllers
-						if (GUI.Button (new Rect (305, 320, 100, 50), "A")) {//currently representing correct choice
+						if (GUI.Button (new Rect (315, 360, 100, 50), "A")) {//currently representing correct choice
 								//questPoint = questPoint + 100;
 								
 								feedback = "";
@@ -72,7 +62,7 @@ public class Pause : MonoBehaviour {
 								//togglePause (false);
 								//mouseStart (true);
 						}
-						if (GUI.Button (new Rect (425, 320, 100, 50), "B")) {//currently representing wrong choice
+				if (GUI.Button (new Rect (435, 360, 100, 50), "B")) {//currently representing wrong choice
 								//questPoint = questPoint - 25;
 								//feedback = "\n Try Again";
 								//print ("incorrect");
@@ -84,7 +74,7 @@ public class Pause : MonoBehaviour {
 						}
 
 						
-							if (GUI.Button (new Rect (545, 320, 100, 50), "C")) {//currently representing wrong choice
+				if (GUI.Button (new Rect (555, 360, 100, 50), "C")) {//currently representing wrong choice
 								//questPoint = questPoint - 25;
 								//feedback = "\n Try Again";
 								//print ("incorrect");
@@ -94,7 +84,7 @@ public class Pause : MonoBehaviour {
 								//togglePause (false);
 				
 							}
-							if (GUI.Button (new Rect (665, 320, 100, 50), "D")) {//currently representing wrong choice
+				if (GUI.Button (new Rect (675, 360, 100, 50), "D")) {//currently representing wrong choice
 								//questPoint = questPoint - 25;
 								//feedback = "\n Try Again";
 								//print ("incorrect");
@@ -127,28 +117,17 @@ public class Pause : MonoBehaviour {
 					}
 			if (quest.type == Question.qType.truefalse){
 
-				GUI.Box (new Rect (285, 80, 550, 250), quest.qText + feedback);
+				GUI.Box (new Rect (285, 80, 580, 270), quest.qText + "\n \n" + feedback);
 				if (GUI.Button (new Rect (165, 150, 100, 50), "I give up")) {//currently representing correct choice
+					feedback = "";//<-- resets "try again" if person gives up
 					questPoint = questPoint - 100;
 					damage--;
 					print (questPoint);
 					togglePause (false);
 					mouseStart (true);
 				}
-				
-				/*
-								 * The new Rect for the below Buttons, when script is added
-								 * to make multiple choice, 280 is left most, add 100 to that
-								 * number to account width, then add 20 to create a nice space
-								 * between the buttons.
-								 * 
-								 * There needs to be an if-else that checks which type. When
-								 * that is done all you'll need to is copy the below script
-								 * which represents what a multichoice GUI looks like and add
-								 * it to the if multichoice statement.
-								 */
 				//button controllers
-				if (GUI.Button (new Rect (425, 320, 100, 50), "True")) {//currently representing correct choice
+				if (GUI.Button (new Rect (435, 360, 100, 50), "True")) {//currently representing correct choice
 					ans = "0";
 					eval = true;
 					//feedback = "";
@@ -156,7 +135,7 @@ public class Pause : MonoBehaviour {
 					//togglePause (false);
 					//mouseStart (true);
 				}
-				if (GUI.Button (new Rect (545, 320, 100, 50), "False")) {//currently representing wrong choice
+				if (GUI.Button (new Rect (605, 360, 100, 50), "False")) {//currently representing wrong choice
 					ans = "1";
 					eval = true;
 					//questPoint = questPoint - 25;
