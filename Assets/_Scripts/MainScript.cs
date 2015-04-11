@@ -12,10 +12,17 @@ public class MainScript : MonoBehaviour {
 	private static int hits;
 	public GameObject scoreText;
 	public GameObject hitText;
+	public bool gameLose;
+	GameObject person1;
+	GameObject person2;
+	GameObject move;
+	public GUIStyle style = new GUIStyle();
 
 	void Awake () {
 		scoreText = GameObject.Find("questionText");
 		hitText = GameObject.Find ("damageText");
+		person1 = GameObject.Find ("Boat");
+		person2 = GameObject.Find ("Graphics");
 		}
 
 	// Use this for initialization
@@ -37,13 +44,31 @@ public class MainScript : MonoBehaviour {
 
 	
 	}
-	
+	void OnGUI () {
+				GUI.skin.box = style;
+
+				if (gameLose == true) {
+						GUI.Box (new Rect (285, 80, 500, 200), "Gameover! \n Your boat sank. \n Would you like to play again?");
+						if (GUI.Button (new Rect (425, 300, 100, 50), "Yes!")) {//restarts
+								Application.LoadLevel ("_Scene_1");
+						} else if (GUI.Button (new Rect (545, 300, 100, 50), "Main menu")) {//returns to main menu
+								Application.LoadLevel ("_Scene_0");
+						}
+				}
+		}
 	// Update is called once per frame
 	void Update () {
 		hits = Pause.S.damage;
 		score = Pause.S.questPoint;
 		scoreText.guiText.text = "Score: " + score;
 		hitText.guiText.text = "Hits left: " + hits;
+		if (hits == 0) {
+			Destroy(person1);
+			Destroy(person2);
+			Time.timeScale = 0f;
+			Pause.S.mouseStopped(true);
+			gameLose = true;
+				}
 	}
 	public void parseQuestions(){
 		//print (xml.text);

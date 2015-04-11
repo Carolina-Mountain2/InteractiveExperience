@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Pause : MonoBehaviour
-{
+public class Pause : MonoBehaviour {
 		public bool paused = false;
 		public static Pause S;
 		MouseLook MouseLookScriptX;
@@ -12,8 +11,7 @@ public class Pause : MonoBehaviour
 		public int questPoint = 0;
 		public int damage = 3;
 
-		void Start ()
-		{
+		void Start () {
 				S = this;
 				togglePause (false);
 				GameObject x = GameObject.Find ("First Person Controller");
@@ -22,25 +20,22 @@ public class Pause : MonoBehaviour
 				MouseLookScriptY = y.GetComponent<MouseLook> ();
 		}
 
-		void Update ()
-		{
+		void Update () {
 
 		}
 
-		void OnGUI ()
-		{
-			GUI.skin.box.wordWrap = true;
+		void OnGUI () {
+				GUI.skin.box.wordWrap = true;
 
 				if (paused) {	
-					GUI.Box (new Rect (285, 80, 500, 200), MainScript.S.questions [ranQuest].qText + feedback);
-					if (GUI.Button (new Rect (165, 150, 100, 50), "I give up")) {//currently representing correct choice
-						questPoint = questPoint - 100;
-						damage--;
-						print (questPoint);
-						togglePause (false);
-						MouseLookScriptX.enabled = !MouseLookScriptX.enabled;
-						MouseLookScriptY.enabled = !MouseLookScriptY.enabled;
-					}
+						GUI.Box (new Rect (285, 80, 500, 200), MainScript.S.questions [ranQuest].qText + feedback);
+						if (GUI.Button (new Rect (165, 150, 100, 50), "I give up")) {//currently representing correct choice
+								questPoint = questPoint - 100;
+								damage--;
+								print (questPoint);
+								togglePause (false);
+								mouseStart (true);
+						}
 	
 						/*
 								 * The new Rect for the below Buttons, when script is added
@@ -59,8 +54,7 @@ public class Pause : MonoBehaviour
 								feedback = "";
 								print (questPoint);
 								togglePause (false);
-								MouseLookScriptX.enabled = !MouseLookScriptX.enabled;
-								MouseLookScriptY.enabled = !MouseLookScriptY.enabled;
+								mouseStart (true);
 						}
 						if (GUI.Button (new Rect (425, 300, 100, 50), "incorrect!")) {//currently representing wrong choice
 								questPoint = questPoint - 25;
@@ -91,18 +85,33 @@ public class Pause : MonoBehaviour
 				}
 		}
 
-		public void togglePause (bool isPaused)
-		{
+		public void mouseStopped (bool mouseStop) {
+
+				if (mouseStop == true) {
+						MouseLookScriptX.enabled = !MouseLookScriptX.enabled;
+						MouseLookScriptY.enabled = !MouseLookScriptY.enabled;
+				} 
+
+		}
+
+		public void mouseStart (bool mouseGo) {
+		
+				if (mouseGo == true) {
+						MouseLookScriptX.enabled = !MouseLookScriptX.enabled;
+						MouseLookScriptY.enabled = !MouseLookScriptY.enabled;
+				} 
+		
+		}
+
+		public void togglePause (bool isPaused) {
 
 				if (isPaused == true) {
 						ranQuest = Random.Range (2, 23);
-
+						mouseStopped (true);
 						paused = true;
 						Time.timeScale = 0f;
 						print ("game paused");
-						MouseLookScriptX.enabled = !MouseLookScriptX.enabled;
-						MouseLookScriptY.enabled = !MouseLookScriptY.enabled;
-						
+					
 
 			           
 
