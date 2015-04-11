@@ -1044,6 +1044,7 @@ MonoBehaviour:
   scoreText: {fileID: 673924571}
   hitText: {fileID: 1268601539}
   gameLose: 0
+  gameFinish: 0
   style:
     m_Name: 
     m_Normal:
@@ -2573,8 +2574,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876115935}
-  m_LocalRotation: {x: .678874969, y: .0615146495, z: .0562545024, w: -.729506791}
-  m_LocalPosition: {x: 1091.53015, y: -1277.21729, z: -288.786987}
+  m_LocalRotation: {x: 0, y: .229281247, z: 0, w: .97336024}
+  m_LocalPosition: {x: 763.761292, y: 52.1399994, z: -75.306076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

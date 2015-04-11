@@ -13,6 +13,7 @@ public class MainScript : MonoBehaviour {
 	public GameObject scoreText;
 	public GameObject hitText;
 	public bool gameLose;
+	public bool gameFinish;
 	GameObject person1;
 	GameObject person2;
 	GameObject move;
@@ -54,7 +55,14 @@ public class MainScript : MonoBehaviour {
 						} else if (GUI.Button (new Rect (545, 300, 100, 50), "Main menu")) {//returns to main menu
 								Application.LoadLevel ("_Scene_0");
 						}
-				}
+				} else if (gameFinish == true) {
+			GUI.Box (new Rect (285, 80, 500, 200), "Gameover! \n You've finished the game! \n Final score: " + score + "\n Would you like to play again?");
+			if (GUI.Button (new Rect (425, 300, 100, 50), "Yes!")) {//restarts
+				Application.LoadLevel ("_Scene_1");
+			} else if (GUI.Button (new Rect (545, 300, 100, 50), "Main menu")) {//returns to main menu
+				Application.LoadLevel ("_Scene_0");
+			}
+		}
 		}
 	// Update is called once per frame
 	void Update () {
