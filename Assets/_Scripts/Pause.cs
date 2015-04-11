@@ -7,9 +7,12 @@ public class Pause : MonoBehaviour {
 		MouseLook MouseLookScriptX;
 		MouseLook MouseLookScriptY;
 		string feedback;
+	    string ans;
+		bool eval = false;
 		int ranQuest = 0;
 		public int questPoint = 0;
 		public int damage = 3;
+	public Question quest;
 
 		void Start () {
 				S = this;
@@ -28,7 +31,17 @@ public class Pause : MonoBehaviour {
 				GUI.skin.box.wordWrap = true;
 
 				if (paused) {	
-						GUI.Box (new Rect (285, 80, 500, 200), MainScript.S.questions [ranQuest].qText + feedback);
+					mouseStopped(true);
+					quest = MainScript.S.questions[ranQuest];
+
+				if (quest.type== Question.qType.multiChoice){
+						
+				GUI.Box (new Rect (285, 80, 550, 250), quest.qText +"\n" +
+				         							"A "+ quest.answers[0]+"\n" + 
+				         							"B "+ quest.answers[1]+"\n" + 
+				         							"C "+ quest.answers[2]+"\n" +         
+				         							"D "+ quest.answers[3]+"\n" + 
+				         							feedback);
 						if (GUI.Button (new Rect (165, 150, 100, 50), "I give up")) {//currently representing correct choice
 								questPoint = questPoint - 100;
 								damage--;
@@ -44,44 +57,140 @@ public class Pause : MonoBehaviour {
 								 * between the buttons.
 								 * 
 								 * There needs to be an if-else that checks which type. When
-								 * that is done all you'll need to is copy the below script
+								 * that is done all you'll need to is copy the below script 
 								 * which represents what a multichoice GUI looks like and add
 								 * it to the if multichoice statement.
 								 */
 						//button controllers
-						if (GUI.Button (new Rect (305, 300, 100, 50), "Correct Answer!")) {//currently representing correct choice
-								questPoint = questPoint + 100;
+						if (GUI.Button (new Rect (305, 320, 100, 50), "A")) {//currently representing correct choice
+								//questPoint = questPoint + 100;
+								
 								feedback = "";
+					            ans = "0";
 								print (questPoint);
-								togglePause (false);
-								mouseStart (true);
+								eval = true;
+								//togglePause (false);
+								//mouseStart (true);
 						}
-						if (GUI.Button (new Rect (425, 300, 100, 50), "incorrect!")) {//currently representing wrong choice
-								questPoint = questPoint - 25;
-								feedback = "\n Try Again";
-								print ("incorrect");
+						if (GUI.Button (new Rect (425, 320, 100, 50), "B")) {//currently representing wrong choice
+								//questPoint = questPoint - 25;
+								//feedback = "\n Try Again";
+								//print ("incorrect");
+								ans = "1";
 								print (questPoint);
+								eval = true;
 								//togglePause (false);
 
 						}
-						if (GUI.Button (new Rect (545, 300, 100, 50), "incorrect!")) {//currently representing wrong choice
-								questPoint = questPoint - 25;
-								feedback = "\n Try Again";
-								print ("incorrect");
-								print (questPoint);
+
+						
+							if (GUI.Button (new Rect (545, 320, 100, 50), "C")) {//currently representing wrong choice
+								//questPoint = questPoint - 25;
+								//feedback = "\n Try Again";
+								//print ("incorrect");
+							     ans = "2";
+								 print (questPoint);
+					             eval = true;
 								//togglePause (false);
 				
-						}
-						if (GUI.Button (new Rect (665, 300, 100, 50), "incorrect!")) {//currently representing wrong choice
-								questPoint = questPoint - 25;
-								feedback = "\n Try Again";
-								print ("incorrect");
+							}
+							if (GUI.Button (new Rect (665, 320, 100, 50), "D")) {//currently representing wrong choice
+								//questPoint = questPoint - 25;
+								//feedback = "\n Try Again";
+								//print ("incorrect");
+								ans="3";
 								print (questPoint);
+					            eval = true;
 								//togglePause (false);
 				
-						}
+							}
+
+				if (ans == quest.corChoice.ToString()&& eval == true){
+					questPoint = questPoint + 100;
+					togglePause (false);
+					mouseStart (true);
+					print (questPoint);
+					eval = false;
+					feedback = "";
+
+				}
+				if (ans != quest.corChoice.ToString() && eval == true){
+					questPoint = questPoint - 25;
+					feedback = "\n Try Again";
+					print ("incorrect");
+					print (questPoint);
+					eval = false;
+
+				}
+					
+
+					}
+			if (quest.type == Question.qType.truefalse){
+
+				GUI.Box (new Rect (285, 80, 550, 250), quest.qText + feedback);
+				if (GUI.Button (new Rect (165, 150, 100, 50), "I give up")) {//currently representing correct choice
+					questPoint = questPoint - 100;
+					damage--;
+					print (questPoint);
+					togglePause (false);
+					mouseStart (true);
+				}
+				
+				/*
+								 * The new Rect for the below Buttons, when script is added
+								 * to make multiple choice, 280 is left most, add 100 to that
+								 * number to account width, then add 20 to create a nice space
+								 * between the buttons.
+								 * 
+								 * There needs to be an if-else that checks which type. When
+								 * that is done all you'll need to is copy the below script
+								 * which represents what a multichoice GUI looks like and add
+								 * it to the if multichoice statement.
+								 */
+				//button controllers
+				if (GUI.Button (new Rect (425, 320, 100, 50), "True")) {//currently representing correct choice
+					ans = "0";
+					eval = true;
+					//feedback = "";
+					print (questPoint);
+					//togglePause (false);
+					//mouseStart (true);
+				}
+				if (GUI.Button (new Rect (545, 320, 100, 50), "False")) {//currently representing wrong choice
+					ans = "1";
+					eval = true;
+					//questPoint = questPoint - 25;
+					//feedback = "\n Try Again";
+					//print ("incorrect");
+					print (questPoint);
+					//togglePause (false);
+					
+				}
+
+				if (ans == quest.corChoice.ToString()&& eval == true){
+					questPoint = questPoint + 100;
+					togglePause (false);
+					mouseStart (true);
+					print (questPoint);
+					eval = false;
+					feedback = "";
+					
+				}
+				if (ans != quest.corChoice.ToString() && eval == true){
+					questPoint = questPoint - 25;
+					feedback = "\n Try Again";
+					print ("incorrect");
+					print (questPoint);
+					eval = false;
+					
+				}
 
 
+
+			}
+
+
+					
 				}
 		}
 
