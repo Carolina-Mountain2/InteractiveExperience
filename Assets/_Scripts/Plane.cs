@@ -18,9 +18,6 @@ public class Plane : MonoBehaviour {
 	void OnTriggerEnter(Collider col){    
 
 		if (col.tag == "Boat") {
-			print ("Boat hit plane");
-			//qText.guiText.text = MainScript.S.questions[0].qText; <-- in case GUI Box is inadequate
-			print (MainScript.S.questions[0].qText);
 			bool tem = true;
 			Pause.S.togglePause(tem);
 			Destroy(this);//destroy this plane's collider

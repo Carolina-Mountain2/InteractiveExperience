@@ -14,13 +14,9 @@ public class Goal : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){    
-		
 		if (col.tag == "Boat") {
-			print ("You Reached The Goal");
 			MainScript.S.gameFinish = true;
 			Pause.S.mouseStopped (true);
-		
-
 		}
 	}
 

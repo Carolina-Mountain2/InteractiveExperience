@@ -18,7 +18,9 @@ public class MainScript : MonoBehaviour {
 	GameObject person2;
 	GameObject move;
 	public GUIStyle style = new GUIStyle();
+	public AudioSource audioClick;
 
+	
 	void Awake () {
 		scoreText = GameObject.Find("questionText");
 		hitText = GameObject.Find ("damageText");
@@ -38,29 +40,33 @@ public class MainScript : MonoBehaviour {
 		parseQuestions ();
 		questions = Qs.ToArray(); // QUESTION ARRAY CREATED HERE; ANYTHING DEALING WITH QUESTIONS SHOULD BE BELOW THIS   
 		//qprint();
-
-
-
 		//print (questions [1].correct);
-
-	
 	}
 	void OnGUI () {
 				GUI.skin.box = style;
 
 				if (gameLose == true) {
-						GUI.Box (new Rect (285, 80, 500, 200), "Gameover! \n Your boat sank. \n Would you like to play again?");
+						GUI.Box (new Rect (285, 80, 500, 200), "Gameover! " + 
+			         										   "\n Your boat sank. " +
+			         										   "\n Would you like to play again?");
 						if (GUI.Button (new Rect (425, 300, 100, 50), "Yes!")) {//restarts
-								Application.LoadLevel ("_Scene_1");
+								DelayedReset("ResetGame", 0.1f);
+								audioClick.Play();
 						} else if (GUI.Button (new Rect (545, 300, 100, 50), "Main menu")) {//returns to main menu
-								Application.LoadLevel ("_Scene_0");
+								DelayedReset("ResetTitle", 0.1f);
+								audioClick.Play();
 						}
 				} else if (gameFinish == true) {
-			GUI.Box (new Rect (285, 80, 500, 200), "Gameover! \n You've finished the game! \n Final score: " + score + "\n Would you like to play again?");
+			GUI.Box (new Rect (285, 80, 500, 200), "Gameover! " +
+													"\n You've finished the game! " +
+													"\n Final score: " + score + 
+			         								"\n Would you like to play again?");
 			if (GUI.Button (new Rect (425, 300, 100, 50), "Yes!")) {//restarts
-				Application.LoadLevel ("_Scene_1");
+				DelayedReset("ResetGame", 0.1f);
+				audioClick.Play();
 			} else if (GUI.Button (new Rect (545, 300, 100, 50), "Main menu")) {//returns to main menu
-				Application.LoadLevel ("_Scene_0");
+				DelayedReset("ResetTitle", 0.1f);
+				audioClick.Play();
 			}
 		}
 	}
@@ -68,10 +74,11 @@ public class MainScript : MonoBehaviour {
 	void Update () {
 		hits = Pause.S.damage;
 		score = Pause.S.questPoint;
-		scoreText.guiText.text = "Score: " + score;
 		hitText.guiText.text = "Hits left: " + hits;
+		scoreText.guiText.text = "Score: " + score;
 		if (gameFinish == true) {
 			score = score * hits;
+			scoreText.guiText.text = "";
 		}
 		if (hits == 0) {
 			Destroy(person1);
@@ -99,4 +106,16 @@ public class MainScript : MonoBehaviour {
 
 	}
 
+	public void DelayedReset (string reset, float delay) {
+
+		Invoke (reset, delay);
+	}
+	
+	public void ResetTitle() {
+		Application.LoadLevel ("__title_screen");
+	}
+	public void ResetGame() {
+		Application.LoadLevel ("__game_scene");
+	}
+	
 }

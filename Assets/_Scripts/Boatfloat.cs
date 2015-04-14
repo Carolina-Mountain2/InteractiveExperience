@@ -21,7 +21,6 @@ public class Boatfloat : MonoBehaviour {
 				// apply upward force
 				Vector3 force = transform.up * UpwardForce;
 				this.rigidbody.AddRelativeForce(force, ForceMode.Acceleration);
-				//Debug.Log("Upward force: " + force+" @"+Time.time);
 			}
 		}
 	}
