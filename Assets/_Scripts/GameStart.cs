@@ -22,7 +22,7 @@ public class GameStart : MonoBehaviour {
 	{
 
 				if (goBack == true) {
-						if (GUI.Button (new Rect (480, 380, 100, 50), "Return")) {
+						if (GUI.Button (new Rect (430, 380, 100, 50), "Return")) {
 								DelayedReset (0.1f);
 								audioClick.Play ();
 						}
@@ -30,7 +30,7 @@ public class GameStart : MonoBehaviour {
 
 
 				if (isActive) {
-						if (GUI.Button (new Rect (480, 320, 100, 50), "How to Play")) {
+						if (GUI.Button (new Rect (430, 320, 100, 50), "How to Play")) {
 								text.guiText.text = "Use your mouse to look around." + 
 										"\n Left click to make selection." + 
 										"\n W is ↑, A is ←, S is ↓, and D is →";
@@ -40,7 +40,7 @@ public class GameStart : MonoBehaviour {
 
 						}
 
-						if (GUI.Button (new Rect (480, 390, 100, 50), "Credits")) {
+						if (GUI.Button (new Rect (430, 390, 100, 50), "Credits")) {
 								text.guiText.text = "Programmers: \n \n Andrew Madden," + 
 										" Brendan Mulhern \n Tyler Strickland," + 
 										" Andy Thornburg \n \n" + 
@@ -51,7 +51,7 @@ public class GameStart : MonoBehaviour {
 						}
 
 
-						if (GUI.Button (new Rect (480, 460, 100, 50), "Click to Begin!")) {
+						if (GUI.Button (new Rect (430, 460, 100, 50), "Click to Begin!")) {
 
 								Application.LoadLevel ("__game_scene");
 								audioClick.Play ();
