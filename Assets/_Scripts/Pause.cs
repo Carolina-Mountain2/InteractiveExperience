@@ -12,7 +12,7 @@ public class Pause : MonoBehaviour {
 		int ranQuest = 0;
 		int oldQ = 0;   
 		public int questPoint = 0;
-		public int damage = 3;
+		public int damage = 5;
 		public Question quest;
 		public AudioSource audioClick;
 		public bool hitRock = false;

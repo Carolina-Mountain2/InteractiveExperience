@@ -1204,7 +1204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paused: 0
   questPoint: 0
-  damage: 1
+  damage: 5
   audioClick: {fileID: 109001028}
   hitRock: 0
 --- !u!82 &243069640
