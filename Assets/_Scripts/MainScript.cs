@@ -33,7 +33,6 @@ public class MainScript : MonoBehaviour {
 		S = this;
 		QP = GetComponent<QuestionParser> ();  // the question parser, it should be attached to the same game object as this script
 		Qs = new List<Question>();// HOUSEKEEPING ONLY: a linked list containing the questions
-
 		scoreText.guiText.text = "Score: " + score;
 		hitText.guiText.text = "Hits left: " + hits;
 
@@ -50,10 +49,12 @@ public class MainScript : MonoBehaviour {
 			         										   "\n Your boat sank. " +
 			         										   "\n Would you like to play again?");
 						if (GUI.Button (new Rect (425, 300, 100, 50), "Yes!")) {//restarts
-								DelayedReset("ResetGame", 0.1f);
+								//DelayedReset("ResetGame", 0.1f);
+								Application.LoadLevel("__game_scene");
 								audioClick.Play();
 						} else if (GUI.Button (new Rect (545, 300, 100, 50), "Main menu")) {//returns to main menu
-								DelayedReset("ResetTitle", 0.1f);
+								//DelayedReset("ResetTitle", 0.1f);
+								Application.LoadLevel("__title_screen");
 								audioClick.Play();
 						}
 				} else if (gameFinish == true) {
