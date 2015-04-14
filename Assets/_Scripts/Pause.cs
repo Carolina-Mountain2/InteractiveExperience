@@ -15,6 +15,7 @@ public class Pause : MonoBehaviour {
 		public int damage = 3;
 		public Question quest;
 		public AudioSource audioClick;
+		public bool hitRock = false;
 	
 		void Start () {
 				S = this;
@@ -101,10 +102,17 @@ public class Pause : MonoBehaviour {
 										feedback = "";
 								}
 								if (ans != quest.corChoice.ToString () && eval == true) {
+									if (hitRock == true){
+										togglePause(false);
+										mouseStart (true);
+										eval = false;
+										damage--;
+										hitRock = false;
+									}else{
 										questPoint = questPoint - 25;
 										feedback = "\n Try Again";
 										eval = false;
-
+									}
 								}
 					
 
@@ -149,10 +157,18 @@ public class Pause : MonoBehaviour {
 					
 								}
 								if (ans != quest.corChoice.ToString () && eval == true) {
+
+									if (hitRock == true){
+										togglePause(false);
+										mouseStart (true);
+										eval = false;
+										damage--;
+										hitRock = false;
+									}else{
 										questPoint = questPoint - 25;
 										feedback = "\n Try Again";
 										eval = false;
-					
+									}
 								}
 
 

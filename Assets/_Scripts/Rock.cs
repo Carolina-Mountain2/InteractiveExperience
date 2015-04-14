@@ -15,6 +15,7 @@ public class Rock : MonoBehaviour {
 	void OnTriggerEnter(Collider col){    
 		//print (col.name);
 		if (col.tag == "Boat") {
+			Pause.S.hitRock = true;
 			bool tem = true;
 			Pause.S.togglePause(tem);
 			Destroy(this);//destroys this rock's collider
