@@ -33,7 +33,9 @@ public class GameStart : MonoBehaviour {
 						if (GUI.Button (new Rect (430, 320, 100, 50), "How to Play")) {
 								text.guiText.text = "Use your mouse to look around." + 
 										"\n Left click to make selection." + 
-										"\n W is ↑, A is ←, S is ↓, and D is →";
+										"\n W is ↑, A is ←, S is ↓, and D is →" +
+										"\n \n You can also use your arrow keys:" +
+										"\n ↑, ←, ↓, →";
 								goBack = true;
 								isActive = false;
 								audioClick.Play ();
