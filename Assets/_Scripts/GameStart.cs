@@ -6,16 +6,19 @@ using System.Collections;
 public class GameStart : MonoBehaviour {
 
 	public GameObject text;
+	public GameObject credit;
 	bool goBack = false;
 	bool isActive = true;
 	public AudioSource audioClick;
 
 	void Awake () {
 		text = GameObject.Find("menuText");
+		credit = GameObject.Find ("creditText");
 	}
 
 	void Start () {
 		text.guiText.text = "The Carolina Mountain River Ride";
+		credit.guiText.text = "";
 		}
 
 	void OnGUI ()
@@ -47,6 +50,11 @@ public class GameStart : MonoBehaviour {
 										" Brendan Mulhern \n Tyler Strickland," + 
 										" Andy Thornburg \n \n" + 
 										" Information Consultant:\n \n Olivia Bowman";
+								credit.guiText.text = "All assets and terrains were obtained\n" + 
+													"through Unity's store\n" + 
+													" https://www.assetstore.unity3d.com/en/?gclid=CLnjjO-_h8UCFczm7AodyXAARA#!/content/6 -terrain\n" + 
+													" https://www.assetstore.unity3d.com/en/?gclid=CLnjjO-_h8UCFczm7AodyXAARA#!/content/780   -boat";
+
 								goBack = true;
 								isActive = false;
 								audioClick.Play ();
